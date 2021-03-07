@@ -1,0 +1,10 @@
+---
+- name: ansible Idempotency test
+  gather_facts: no
+  hosts: localhost
+  become: no
+  tasks:
+  - name: copy source directory to destination directory
+    copy:
+      src: /Users/godo/Downloads/file.txt
+      dest: /Users/godo/Documents
