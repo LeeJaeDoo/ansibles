@@ -1,0 +1,4 @@
+- name: make direcotry
+  file:
+    path: "/home/ubuntu/"
+    state: directory
