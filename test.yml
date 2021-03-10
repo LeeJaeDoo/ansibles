@@ -1,4 +1,7 @@
-- name: make direcotry
-  file:
-    path: "/home/ubuntu/"
-    state: directory
+---
+-  name: ping test
+   hosts: all
+   gather_facts: false
+   tasks:
+     - name: ping
+       ping:
