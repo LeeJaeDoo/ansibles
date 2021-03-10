@@ -3,3 +3,5 @@
 pid=`ps -ef | grep sp-0.0.1-SNAPSHOT.jar | grep -v 'grep' | awk '{print $2}'`
 echo $pid
 kill -9 $pid
+
+rm /home/ubuntu/app/sp-0.0.1-SNAPSHOT.jar /home/ubuntu/app/stop.sh /home/ubuntu/app/start.sh
