@@ -8,9 +8,9 @@
          src: /home/ubuntu/ansibles/roles/test/files/stop.sh
          dest: /home/ubuntu/app
      - name: store start file to remote server
-         copy:
-           src: /home/ubuntu/ansibles/roles/test/files/start.sh
-           dest: /home/ubuntu/app
+       copy:
+         src: /home/ubuntu/ansibles/roles/test/files/start.sh
+         dest: /home/ubuntu/app
      - name: server stop
        shell: sh "/home/ubuntu/app/stop.sh"
      - name: store jar file to remote server
