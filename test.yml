@@ -3,10 +3,13 @@
    hosts: sp-member
    gather_facts: false
    tasks:
-     - name: store stop.sh file to remote server
+     - name: store stop start file to remote server
        copy:
-         src: /home/ubuntu/ansibles/roles/test/files/stop.sh
+         src: /home/ubuntu/ansibles/roles/test/files/{{ item }}
          dest: /home/ubuntu/app
+         with_items:
+           - stop.sh
+           - start.sh
      - name: server stop
        shell: sh "/home/ubuntu/app/stop.sh"
      - name: store jar file to remote server
@@ -14,4 +17,4 @@
          src: /var/lib/jenkins/workspace/test/build/libs/sp-0.0.1-SNAPSHOT.jar
          dest: /home/ubuntu/app
      - name: server startup
-       shell: nohup java -jar /home/ubuntu/app/sp-0.0.1-SNAPSHOT.jar
+       shell: sh "/home/ubuntu/app/start.sh"
