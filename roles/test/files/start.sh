@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#ssh -i /home/ubuntu/ansibles/roles/test/files/sp-member.pem ubuntu@15.165.213.153 "rm /home/ubuntu/app/sp-0.0.1-SNAPSHOT.jar /home/ubuntu/app/stop.sh"
+nohup java -jar /home/ubuntu/app/sp-0.0.1-SNAPSHOT.jar &
 
-#scp -i /home/ubuntu/ansibles/roles/test/files/sp-member.pem /var/lib/jenkins/workspace/test/build/libs/sp-0.0.1-SNAPSHOT.jar /home/ubuntu/ansibles/roles/test/files/stop.sh ubuntu@15.165.213.153:~/app
-
-nohup java -jar /home/ubuntu/app/sp-0.0.1-SNAPSHOT.jar
+exit
