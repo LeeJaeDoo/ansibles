@@ -3,13 +3,14 @@
    hosts: sp-member
    gather_facts: false
    tasks:
-     - name: store stop start file to remote server
+     - name: store stop file to remote server
        copy:
-         src: /home/ubuntu/ansibles/roles/test/files/{{ item }}
+         src: /home/ubuntu/ansibles/roles/test/files/stop.sh
          dest: /home/ubuntu/app
-         with_items:
-           - stop.sh
-           - start.sh
+     - name: store start file to remote server
+         copy:
+           src: /home/ubuntu/ansibles/roles/test/files/start.sh
+           dest: /home/ubuntu/app
      - name: server stop
        shell: sh "/home/ubuntu/app/stop.sh"
      - name: store jar file to remote server
