@@ -1,5 +1,6 @@
 ---
 -  name: copy to remote server
+   hosts: sp-member
    gather_facts: false
    tasks:
      - name: server stop
