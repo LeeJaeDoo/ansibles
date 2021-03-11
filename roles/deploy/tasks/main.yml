@@ -1,0 +1,17 @@
+---
+- name: store stop file to remote server
+  copy:
+    src: /home/ubuntu/ansibles/roles/deploy/files/stop.sh
+    dest: /home/ubuntu/app
+- name: store start file to remote server
+  copy:
+    src: /home/ubuntu/ansibles/roles/deploy/files/start.sh
+    dest: /home/ubuntu/app
+- name: server stop
+  shell: sh "/home/ubuntu/app/stop.sh"
+- name: store jar file to remote server
+  copy:
+    src: /var/lib/jenkins/workspace/test/build/libs/sp-0.0.1-SNAPSHOT.jar
+    dest: /home/ubuntu/app
+- name: server startup
+  shell: sh "/home/ubuntu/app/start.sh"
