@@ -1,7 +1,9 @@
 ---
--  name: ping test
+-  name: copy to remote server
    hosts: sp-member
    gather_facts: false
    tasks:
-     - name: ping
-       ping:
+     - name: store jar file to remote server
+       copy:
+         src: /var/lib/jenkins/workspace/test/build/libs/sp-0.0.1-SNAPSHOT.jar
+         dest: /home/ubuntu/app
