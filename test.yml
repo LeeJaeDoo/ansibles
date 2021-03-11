@@ -8,7 +8,7 @@
          src: /home/ubuntu/ansibles/roles/test/files/stop.sh
          dest: /home/ubuntu/app
      - name: server stop
-       shell: sh > "/home/ubuntu/app/stop.sh"
+       shell: sh "/home/ubuntu/app/stop.sh"
      - name: store jar file to remote server
        copy:
          src: /var/lib/jenkins/workspace/test/build/libs/sp-0.0.1-SNAPSHOT.jar
