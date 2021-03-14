@@ -3,16 +3,16 @@
   tags: stop
   block:
   - name: stop nginx
-    shell: "{{ nginx_directory }}/sbin/nginx -s stop"
+    shell: "/sbin/nginx -s stop"
     ignore_errors: yes
 
 - name: store build file to remote server
   copy:
-    src: /var/lib/jenkins/workspace/front/build
+    src: /var/lib/jenkins/workspace/front
     dest: /var/www/front-app
 
 - name: start nginx
   tags: start
   block:
   - name: start nginx
-    shell: "{{ nginx_directory }}/sbin/nginx"
+    shell: "/sbin/nginx"
