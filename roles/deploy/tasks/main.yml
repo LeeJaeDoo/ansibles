@@ -14,4 +14,4 @@
     src: "/var/lib/jenkins/workspace/{{ service.name }}/build/libs/{{ service.jar }}.jar"
     dest: /home/ubuntu/app
 - name: server startup
-  shell: sh "/home/ubuntu/app/start.sh"
+  shell: "nohup java -jar /home/ubuntu/app/{{ service.jar }}.jar &"
