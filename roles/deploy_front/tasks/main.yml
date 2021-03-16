@@ -3,7 +3,7 @@
   tags: stop
   block:
   - name: stop nginx
-    shell: "shdo /etc/init.d/nginx stop"
+    shell: "sudo /etc/init.d/nginx stop"
     ignore_errors: yes
 
 - name: store build file to remote server
