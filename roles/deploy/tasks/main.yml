@@ -11,7 +11,7 @@
   shell: sh "/home/ubuntu/app/stop.sh"
 - name: store jar file to remote server
   copy:
-    src: /var/lib/jenkins/workspace/{{ service.name }}/build/libs/{{ service.jar }}.jar
+    src: "/var/lib/jenkins/workspace/{{ service.name }}/build/libs/{{ service.jar }}.jar"
     dest: /home/ubuntu/app
 - name: server startup
   shell: sh "/home/ubuntu/app/start.sh"
