@@ -1,0 +1,5 @@
+---
+service:
+  name: sp-member(CI)
+  jar: sp-0.0.1-SNAPSHOT
+  directory: member-front
