@@ -1,15 +1,15 @@
 ---
+- name: store build file to remote server
+  copy:
+    src: /var/lib/jenkins/workspace/front/build
+    dest: /var/www/front-app/workspace/front
+
 - name: stop nginx
   tags: stop
   block:
   - name: stop nginx
     shell: "sudo /etc/init.d/nginx stop"
     ignore_errors: yes
-
-- name: store build file to remote server
-  copy:
-    src: /var/lib/jenkins/workspace/front
-    dest: /var/www/front-app/workspace/front
 
 - name: start nginx
   tags: start
