@@ -7,7 +7,9 @@
     ignore_errors: yes
 
 - name: store build file to remote server
-  command: sudo cp -r /var/lib/jenkins/workspace/front /var/www/front-app/workspace/front
+  copy:
+    src: /var/lib/jenkins/workspace/front
+    dest: /var/www/front-app/workspace/front
 
 - name: start nginx
   tags: start
