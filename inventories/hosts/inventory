@@ -2,7 +2,7 @@
 sp-member ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/ansibles/roles/deploy/files/sp-member.pem ansible_ssh_host=15.165.213.153
 
 [sp-mart]
-sp-mart ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/ansibles/roles/deploy/files/backkeypair.pem ansible_ssh_host=52.79.117.80
+sp-mart ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/ansibles/roles/deploy_mart/files/backkeypair.pem ansible_ssh_host=52.79.117.80
 
 [sp-fe]
 sp-mart ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/ansibles/roles/deploy_front/files/frontkeypair.pem ansible_ssh_host=13.124.223.84

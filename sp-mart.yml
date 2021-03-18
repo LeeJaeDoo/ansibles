@@ -1,0 +1,10 @@
+- hosts: sp-member
+  vars:
+    service:
+      name: sp-mart
+      jar: sp-0.0.1-SNAPSHOT
+      directory: mart-front
+  serial: 1
+  gather_facts: no
+  roles:
+    - deploy_mart
