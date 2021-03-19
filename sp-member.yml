@@ -3,7 +3,7 @@
     service:
       name: sp-member(CI)
       jar: sp-0.0.1-SNAPSHOT
-      directory: member-front
+      port: 8080
   serial: 1
   gather_facts: no
   roles:

@@ -4,10 +4,10 @@
     src: /home/ubuntu/ansibles/roles/deploy/files/stop.sh
     dest: /home/ubuntu/app
 - name: server stop
-  shell: sh "/home/ubuntu/app/stop.sh"
+  shell: "kill -9 {{ service.port }}"
 - name: store jar file to remote server
   copy:
     src: "/var/lib/jenkins/workspace/{{ service.name }}/build/libs/{{ service.jar }}.jar"
     dest: "/home/ubuntu/{{ service.directory }}"
 - name: server startup
-  shell: "nohup java -jar /home/ubuntu/{{ service.directory }}/{{ service.jar }}.jar &"
+  shell: "nohup java -jar /home/ubuntu/{{ service.name }}/{{ service.jar }}.jar &"
