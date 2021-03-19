@@ -1,0 +1,9 @@
+- hosts: sp-member
+  vars:
+    service:
+      name: member-internal
+      jar: internal-1.0
+  serial: 1
+  gather_facts: no
+  roles:
+    - deploy
