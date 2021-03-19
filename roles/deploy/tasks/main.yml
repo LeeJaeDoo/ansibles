@@ -1,10 +1,10 @@
 ---
 - name: store stop shell file to remote server
   copy:
-    src: /home/ubuntu/ansibles/roles/deploy/files/stop.sh
-    dest: /home/ubuntu/app
+    src: "/home/ubuntu/ansibles/roles/deploy/files/stop.sh"
+    dest: "/home/ubuntu/{{ service.name }}"
 - name: server stop
-  shell: "kill -9 {{ service.port }}"
+  shell: "sh '/home/ubuntu/{{ service.name }}/stop.sh'"
 - name: store jar file to remote server
   copy:
     src: "/var/lib/jenkins/workspace/{{ service.name }}/build/libs/{{ service.jar }}.jar"
