@@ -2,12 +2,12 @@
 - name: store stop shell file to remote server
   copy:
     src: "/home/ubuntu/ansibles/roles/deploy/files/stop.sh"
-    dest: "/home/ubuntu/{{ service.name }}"
+    dest: "/home/ubuntu/{{ service.directory }}"
 - name: server stop
-  shell: "sh '/home/ubuntu/{{ service.name }}/stop.sh'"
+  shell: "sh '/home/ubuntu/{{ service.directory }}/stop.sh'"
 - name: store jar file to remote server
   copy:
     src: "/var/lib/jenkins/workspace/{{ service.name }}/build/libs/{{ service.jar }}.jar"
     dest: "/home/ubuntu/{{ service.directory }}"
 - name: server startup
-  shell: "nohup java -jar /home/ubuntu/{{ service.name }}/{{ service.jar }}.jar &"
+  shell: "nohup java -jar /home/ubuntu/{{ service.directory }}/{{ service.jar }}.jar &"
