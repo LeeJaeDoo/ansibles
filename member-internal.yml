@@ -2,7 +2,7 @@
   vars:
     service:
       name: member-internal
-      subName: internal
+      subName: /internal
       jar: internal-1.0
   serial: 1
   gather_facts: no

@@ -1,0 +1,9 @@
+- hosts: sp-eureka
+  vars:
+    service:
+      name: eureka
+      jar: sp-eureka-0.0.1-SNAPSHOT
+  serial: 1
+  gather_facts: no
+  roles:
+    - deploy

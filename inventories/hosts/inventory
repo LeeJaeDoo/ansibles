@@ -6,3 +6,9 @@ sp-mart ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/ansibles/r
 
 [sp-fe]
 sp-mart ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/ansibles/roles/deploy_front/files/frontkeypair.pem ansible_ssh_host=13.124.223.84
+
+[sp-gateway]
+sp-gateway ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/ansibles/roles/deploy/files/sp-member.pem ansible_ssh_host=15.165.213.153
+
+[sp-eureka]
+sp-eureka ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/ansibles/roles/deploy/files/eureka.pem ansible_ssh_host=3.34.76.99
