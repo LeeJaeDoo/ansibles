@@ -1,0 +1,10 @@
+- hosts: sp-member
+  vars:
+    service:
+      name: auth-internal
+      subName: /internal
+      jar: internal-1.0
+  serial: 1
+  gather_facts: no
+  roles:
+    - deploy
