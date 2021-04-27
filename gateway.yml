@@ -1,4 +1,4 @@
-- hosts: sp-gateway
+- hosts: sp-member
   vars:
     service:
       name: gateway
