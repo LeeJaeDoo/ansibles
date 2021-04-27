@@ -2,6 +2,7 @@
   vars:
     service:
       name: gateway
+      subname:
       jar: sp-gateway-0.0.1-SNAPSHOT
   serial: 1
   gather_facts: no

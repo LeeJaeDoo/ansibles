@@ -7,7 +7,7 @@
   shell: "sh '/home/ubuntu/{{ service.name }}/stop.sh'"
 - name: store jar file to remote server
   copy:
-    src: "/var/lib/jenkins/workspace/{{ service.name }}/build/libs/{{ service.jar }}.jar"
+    src: "/var/lib/jenkins/workspace/{{ service.name }}{{ service.subname }}/build/libs/{{ service.jar }}.jar"
     dest: "/home/ubuntu/{{ service.name }}"
 - name: server startup
   shell: "nohup java -jar /home/ubuntu/{{ service.name }}/{{ service.jar }}.jar &"
