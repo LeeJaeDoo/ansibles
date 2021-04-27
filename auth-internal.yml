@@ -7,4 +7,4 @@
   serial: 1
   gather_facts: no
   roles:
-    - deploy
+    - deploy_module
