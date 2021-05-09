@@ -1,0 +1,10 @@
+- hosts: sp-mart
+  vars:
+    service:
+      name: review-front
+      subname: /front
+      jar: front-1.0
+  serial: 1
+  gather_facts: no
+  roles:
+    - deploy
