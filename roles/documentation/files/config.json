@@ -1,0 +1,11 @@
+{
+  "front":
+  [
+    {"url":"../api-spec/sp-member-front.yml", "name":"member"},
+    {"url":"../api-spec/sp-review-front.yml", "name":"review"}
+  ],
+  "internal":
+  [
+    {"url":"../api-spec/sp-auth-internal.yml", "name":"auth"}
+  ]
+}

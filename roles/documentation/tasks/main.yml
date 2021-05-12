@@ -1,0 +1,20 @@
+---
+- name: check documetation files
+  local_action: stat path="/var/lib/jenkins/workspace/{{ service.name }}{{ service.subname }}/build/api-spec/"
+  register: exists_msa_spec
+-
+# Open API documentation YAML 파일 복사
+- name: copy documetation files
+  copy:
+    src: "/var/lib/jenkins/workspace/{{ service.name }}{{ service.subname }}/build/api-spec/"
+    dest: /var/www/front-app/workspace/front/build/api-spec
+  when: exists_msa_spec.stat.exists
+- name: copy documetation files
+  copy:
+    src: "/var/lib/jenkins/workspace/{{ service.name }}/build/api-spec/"
+    dest: /var/www/front-app/workspace/front/build/api-spec
+  when: exists_msa_spec.stat.islnk is not defined
+- name: copy documetation config
+  copy:
+    src: files/.
+    dest: /var/www/front-app/workspace/front/build/
