@@ -1,5 +1,5 @@
 ---
--  name: copy to remote server
+-  name: copy to remote server test
    hosts: sp-member
    gather_facts: false
    tasks:
