@@ -1,8 +1,4 @@
 - hosts: sp-documentation
-  vars:
-    service:
-      name: member-front
-      subname: /front
   gather_facts: no
   roles:
     - documentation
